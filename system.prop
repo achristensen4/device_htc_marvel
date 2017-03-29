@@ -18,7 +18,7 @@ ro.ril.ecc.HTC-WWE=999
 ro.ril.ecc.HTC-ELL=92,93,94
 ro.ril.enable.a52.HTC-ITA=1
 ro.ril.enable.a53.HTC-ITA=1
-ro.ril.enable.a52=0
+ro.ril.enable.a52=1
 ro.ril.enable.a53=1
 ro.ril.vmail.23415=1571,BT
 ro.ril.hsdpa.category=8
@@ -28,7 +28,7 @@ ro.ril.def.agps.mode=2
 ro.ril.gprsclass=12
 
 # For HSDPA low throughput
-ro.ril.disable.power.collapse=1
+ro.ril.disable.power.collapse=0
 
 # Modify MMS APN retry timer from 5s to 2s.
 ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
@@ -36,8 +36,8 @@ ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
 # Time between scans in seconds. Keep it high to minimize battery drain.
 # This only affects the case in which there are remembered access points,
 # but none are in range.
-wifi.interface=eth0
-wifi.supplicant_scan_interval=45
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=16
 
 # Mobile data interfaces
 mobiledata.interfaces=rmnet0,rmnet1,rmnet2
@@ -58,7 +58,7 @@ ro.com.google.locationfeatures=1
 ro.opengles.version=131072
 
 # Disable fs check on boot by default.
-sys.checkfs.fat=false
+sys.checkfs.fat=true
 
 # Performance settings.
 dalvik.vm.execution-mode=int:jit
